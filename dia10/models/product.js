@@ -9,15 +9,6 @@ const getPersonById = (id) => {
    return listPersons().find(person => person.id === id);
 }
 
-/* const usersSchema = new mongoose.Schema({
-    id:{ type: String, required: true },
-    name:{ type: String, required: true },
-    surname: String,
-    isTeacher: { type: Boolean, required: true },
-    birthdate: { type: Date, required: true },
-});
- */
-
 const createPearson = (personData) => {
     const { id, name, surname, isTeacher, birthdate } = personData;
     const persons = listPersons();
@@ -29,6 +20,24 @@ const createPearson = (personData) => {
     return newPerson;
 }
 
-const users = mongoose.model('users', usersSchema);
+const updatedPersons = (id, personData) => {
+    const persons = listPersons();
+    const personIndex = persons.findIndex(person => person.id === id);  
+    if (personIndex === -1) {
+        return null;
+    }
 
-module.exports = users;
+    const updatedPerson = { ...persons[personIndex], ...personData };
+    persons[personIndex] = updatedPerson;
+    writeCSV('persons.csv', persons);   
+    return updatedPerson;
+}
+
+const deletePerson = (id) => {
+    const persons = listPersons();
+    const updatedPersons = persons.filter(person => person.id !== id);
+    writeCSV('persons.csv', updatedPersons);
+    return updatedPersons;
+}
+
+module.exports = { listPersons, getPersonById, createPearson, updatedPersons, deletePerson };

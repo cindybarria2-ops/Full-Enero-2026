@@ -1,0 +1,4 @@
+_id,name,email,password,is_admin,__v
+697b9a920a4339f1690f14c8,cindy,aaa@aaa.a,$2b$12$ntJI8aND4kkuy9ezoAks3Oy5MgBLewpnm01tgMZw6OUeffXynAYmu,true,0
+697b9adf0a4339f1690f14cf,carla,aassa@aaa.a,$2b$12$71Vyhpnqdt7qv/dl/ibjWuMBWwbnEj6uIWf42bhtelFqOsXZBhMJy,false,0
+697b9b720a4339f1690f14d5,alejandro,asa@add.a,$2b$12$9N4dtyvhW7gfUiO6APNSFOKKR2R7evpFM4Q/Fmg5Op6JF3u5q7CJi,false,0

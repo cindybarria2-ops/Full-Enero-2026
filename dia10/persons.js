@@ -21,4 +21,4 @@ const readCSV = (path) => {
     });
 }
 
-modeule.exports = { writeCSV, readCSV };
+module.exports = { writeCSV, readCSV };
