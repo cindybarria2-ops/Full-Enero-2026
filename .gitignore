@@ -2,6 +2,6 @@ node_modules
 package-lock.json
 *.pru
 # Keep environment variables out of version control
-.env
+*.env
 
 /generated/prisma
