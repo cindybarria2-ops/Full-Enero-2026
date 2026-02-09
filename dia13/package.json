@@ -1,0 +1,32 @@
+{
+  "name": "dia13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "config": "^4.2.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.4",
+    "nodemon": "^3.1.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development node index.js",
+    "prod": "cross-env NODE_ENV=production node index.js",
+    "devMon": "nodemon --exec \"cross-env NODE_ENV=development node\" index.js"
+  },
+
+  
+  "Customer": {
+    "dbConfig": {
+      "host": "localhost",
+      "port": 5984,
+      "dbName": "customers"
+    },
+    "credit": {
+      "initialLimit": 100,
+      "initialDays": 1
+    }
+  }
+
+}
