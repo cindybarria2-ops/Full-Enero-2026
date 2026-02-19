@@ -1,5 +1,6 @@
 
 import './App.css'
+import Lista from './components/Lista'
 import Products from './components/Products'
 import Usuarios from './components/Usuarios'
 
@@ -16,6 +17,7 @@ function App() {
       </ul> 
       <Products />
       <Usuarios />
+      <Lista/>
     </>
   )
 }
