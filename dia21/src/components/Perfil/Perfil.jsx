@@ -1,0 +1,11 @@
+import React from "react";
+const Perfil = ({ nombre, edad }) => {
+  return (
+    <div className="flex flex-col items-center justify-center h-screen">    
+        <h1 className="text-4xl font-bold mb-4">Perfil de Usuario</h1>
+        <p className="text-lg mb-2">Nombre: {nombre}</p>
+        <p className="text-lg mb-2">Edad: {edad}</p>
+    </div>
+  );
+}
+export default Perfil;
